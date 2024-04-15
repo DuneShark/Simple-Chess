@@ -1,0 +1,221 @@
+<!-- Tanner Glaser : Chess Game -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DuneShark's Chess</title>
+    <link href="Styles.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="author" content="Tanner Glaser">
+    <meta name="desription" content="Simple Chess">
+    <meta name="keywords" content="Chess">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<script>
+
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("image", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("image");
+        ev.target.appendChild(document.getElementById(data));
+    }
+
+</script>
+
+<body>
+
+    <header>
+        <h1>DuneShark's Simple Chess</h1>
+    </header>
+
+    <div id="container">
+
+        <table id="chessboard" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+            <tr>
+                <th class="number">8</th>
+                <td class="white">
+                    <img id="Black Rook 1" src="Images/Black%20Rook.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="black">
+                    <img id="Black Knight 1" src="Images/Black%20Knight.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="white">
+                    <img id="Black Bishop 1" src="Images/Black%20Bishop.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="black">
+                    <img id="Black Queen" src="Images/Black%20Queen.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="white">
+                    <img id="Black King" src="Images/Black%20King.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="black">
+                    <img id="Black Bishop 2" src="Images/Black%20Bishop.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="white">
+                    <img id="Black Knight 2" src="Images/Black%20Knight.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="black">
+                    <img id="Black Rook 2" src="Images/Black%20Rook.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+            </tr>
+
+            <tr>
+                <th class="number">7</th>
+                <td class="black">
+                    <img id="Black Pawn 1" src="Images/Black%20Pawn.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="white">
+                    <img id="Black Pawn 2" src="Images/Black%20Pawn.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="black">
+                    <img id="Black Pawn 3" src="Images/Black%20Pawn.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="white">
+                    <img id="Black Pawn 4" src="Images/Black%20Pawn.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="black">
+                    <img id="Black Pawn 5" src="Images/Black%20Pawn.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="white">
+                    <img id="Black Pawn 6" src="Images/Black%20Pawn.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="black">
+                    <img id="Black Pawn 7" src="Images/Black%20Pawn.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="white">
+                    <img id="Black Pawn 8" src="Images/Black%20Pawn.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+            </tr>
+
+            <tr>
+                <th class="number">6</th>
+                <td class="white"></td>
+                <td class="black"></td>
+                <td class="white"></td>
+                <td class="black"></td>
+                <td class="white"></td>
+                <td class="black"></td>
+                <td class="white"></td>
+                <td class="black"></td>
+            </tr>
+
+            <tr>
+                <th class="number">5</th>
+                <td class="black"></td>
+                <td class="white"></td>
+                <td class="black"></td>
+                <td class="white"></td>
+                <td class="black"></td>
+                <td class="white"></td>
+                <td class="black"></td>
+                <td class="white"></td>
+            </tr>
+
+            <tr>
+                <th class="number">4</th>
+                <td class="white"></td>
+                <td class="black"></td>
+                <td class="white"></td>
+                <td class="black"></td>
+                <td class="white"></td>
+                <td class="black"></td>
+                <td class="white"></td>
+                <td class="black"></td>
+            </tr>
+
+            <tr>
+                <th class="number">3</th>
+                <td class="black"></td>
+                <td class="white"></td>
+                <td class="black"></td>
+                <td class="white"></td>
+                <td class="black"></td>
+                <td class="white"></td>
+                <td class="black"></td>
+                <td class="white"></td>
+            </tr>
+
+            <tr>
+                <th class="number">2</th>
+                <td class="white">
+                    <img id="White Pawn 1" src="Images/White%20Pawn.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="black">
+                    <img id="White Pawn 2" src="Images/White%20Pawn.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="white">
+                    <img id="White Pawn 3" src="Images/White%20Pawn.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="black">
+                    <img id="White Pawn 4" src="Images/White%20Pawn.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="white">
+                    <img id="White Pawn 5" src="Images/White%20Pawn.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="black">
+                    <img id="White Pawn 6" src="Images/White%20Pawn.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="white">
+                    <img id="White Pawn 7" src="Images/White%20Pawn.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="black">
+                    <img id="White Pawn 8" src="Images/White%20Pawn.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+            </tr>
+
+            <tr>
+                <th class="number">1</th>
+                <td class="black">
+                    <img id="White Rook 1" src="Images/White%20Rook.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="white">
+                    <img id="White Knight 1" src="Images/White%20Knight.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="black">
+                    <img id="White Bishop 1" src="Images/White%20Bishop.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="white">
+                    <img id="White Queen" src="Images/White%20Queen.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="black">
+                    <img id="White King" src="Images/White%20King.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="white">
+                    <img id="White Bishop 2" src="Images/White%20Bishop.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="black">
+                    <img id="White Knight 2" src="Images/White%20Knight.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+                <td class="white">
+                    <img id="White Rook 2" src="Images/White%20Rook.png" draggable="true" ondragstart="drag(event)" style="width: 95%">
+                </td>
+            </tr>
+
+            <tr>
+                <th></th>
+                <th class="letter">A</th>
+                <th class="letter">B</th>
+                <th class="letter">C</th>
+                <th class="letter">D</th>
+                <th class="letter">E</th>
+                <th class="letter">F</th>
+                <th class="letter">G</th>
+                <th class="letter">H</th>
+            </tr>
+
+        </table>        
+
+    </div>
+
+</body>
+
+</html>
